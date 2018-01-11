@@ -1,0 +1,76 @@
+@import '~style/helpers';
+
+.header {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 56px;
+	padding: 0;
+	background: $header-bg;
+	box-shadow: 0 1px 0 rgba(0,0,0,0.2);
+	color: #666;
+	z-index: 50;
+
+	.inner {
+		max-width: 1024px;
+		margin: 0 auto;
+	}
+
+	.logo img {
+		height: 46px;
+		vertical-align: middle;
+		margin: -5px 10px 0 0;
+	}
+
+	.logo, .name {
+		color: inherit;
+		text-decoration: none;
+	}
+
+	@media (max-width: 480px) {
+		.name {
+			display: none;
+		}
+	}
+
+	h1 {
+		float: left;
+		margin: 0;
+		padding: 0 15px;
+		font-size: 36px;
+		line-height: 56px;
+		font-weight: 400;
+		font-family: $font-logo;
+	}
+	
+	nav {
+		float: right;
+		font-size: 100%;
+
+		label {
+			display: inline-block;
+			height: 56px;
+			padding: 0 10px;
+			line-height: 56px;
+			font-weight: bold;
+			color: #bbb;
+		}
+
+		a {
+			display: inline-block;
+			height: 56px;
+			line-height: 56px;
+			padding: 0 10px;
+			text-align: center;
+			background: rgba(255,255,255,0);
+			color: $primary-dark;
+			text-decoration: none;
+		
+			&:hover, &:active {
+				background: $primary-light;
+				color: white;
+			}
+		}
+	}
+}

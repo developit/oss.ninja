@@ -1,0 +1,47 @@
+{
+  "private": true,
+  "name": "oss.ninja",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "start": "if-env NODE_ENV=production && npm run -s serve || npm run -s dev",
+    "build": "preact build",
+    "serve": "preact build && preact serve",
+    "dev": "preact watch",
+    "lint": "eslint src"
+  },
+  "eslintConfig": {
+    "extends": "eslint-config-developit",
+    "rules": {
+      "prefer-spread": 0,
+      "react/prefer-stateless-function": 0,
+      "react/no-danger": 0
+    }
+  },
+  "eslintIgnore": [
+    "build/*"
+  ],
+  "devDependencies": {
+    "eslint": "^4.9.0",
+    "eslint-config-developit": "^1.1.1",
+    "if-env": "^1.0.0",
+    "node-sass": "^4.7.2",
+    "preact-cli": "^2.0.1",
+    "preact-cli-plugin-async": "^1.0.0",
+    "preact-cli-plugin-netlify": "^1.1.0",
+    "sass-loader": "^6.0.6",
+    "webpack-critical": "^1.1.1",
+    "workerize-loader": "^1.0.1"
+  },
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "ganalytics": "^2.0.1",
+    "license.js": "^2.1.0",
+    "preact": "^8.2.6",
+    "preact-compat": "^3.17.0",
+    "preact-context-provider": "^1.0.0",
+    "preact-router": "^2.5.7",
+    "unistore": "^3.0.3",
+    "wiretie": "^1.0.3"
+  }
+}

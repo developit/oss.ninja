@@ -1,0 +1,122 @@
+@import '~style/helpers';
+
+.home {
+	padding-top: 56px;
+	transition: all 500ms ease;
+
+	&.loading {
+		opacity: .8;
+	}
+
+	header {
+		padding: 20px 0 0;
+
+		.logo {
+			display: block;
+			margin: auto;
+			width: 128px;
+			height: 128px;
+		}
+
+		h1 {
+			margin: 0;
+			padding: 0;
+			text-align: center;
+			color: #666;
+			font-weight: 400;
+			font-family: $font-logo;
+			font-size: 400%;
+			text-shadow: 0 1px 0 #FFF, 0 1px 1px #FFF;
+		}
+
+		p {
+			position: relative;
+			top: -.5em;
+			margin: 0;
+			padding: 0;
+			text-align: center;
+			color: fade-out($grey-dark, .5);
+			font-size: 120%;
+		}
+	}
+
+	section {
+		padding: 10px 20px;
+		// margin: 10px;
+		margin: 10px 0;
+		background: #fff;
+		// border-radius: 3px;
+		// border: 2px solid #ccc;
+		border-top: 2px solid #ccc;
+	}
+
+	article {
+		max-width: 800px;
+		margin: auto;
+		text-align: center;
+	}
+
+	.tip {
+		display: inline-block;
+		margin: 10px auto 0;
+		background: fade-out($secondary, .98);
+		border: 1px solid fade-out($secondary, .93);
+		border-radius: 5px;
+		padding: 10px;
+		color: fade-out($secondary, .5);
+
+		p {
+			padding: 0;
+			margin: 0;
+		}
+
+		a {
+			color: inherit;
+		}
+	}
+
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		padding: 0;
+		list-style: none;
+		text-align: center;
+
+		li {
+			display: inline-block;
+			flex: 1 1 33%;
+			margin: 0;
+			padding: 0;
+
+			a {
+				display: block;
+				min-height: 5em;
+				min-width: 200px;
+				margin: 10px;
+				background: fade-out($grey-lighter, .6);
+				padding: 35px 10px 0;
+				border: 1px solid fade-out($grey-lighter, .1);
+				border-radius: 3px;
+				text-align: center;
+				line-height: 1.1;
+				font-size: 120%;
+				color: $grey-dark;
+				text-decoration: none;
+
+				&:hover {
+					border-color: fade-out($primary-dark, .8);
+					background: fade-out($primary-light, .8);
+				}
+			}
+			em {
+				display: block;
+				position: relative;
+				top: .5em;
+				margin-bottom: -20px;
+				font-size: 70%;
+				opacity: .5;
+				text-align: center;
+			}
+		}
+	}
+}
