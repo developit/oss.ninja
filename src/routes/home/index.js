@@ -35,7 +35,7 @@ export default class Home extends Component {
 				<section>
 					<article>
 						<div class={style.tip}>
-							<strong>#protip:</strong> append a Github username to URLs for automatic population:
+							<strong>#protip:</strong> append a GitHub username to URLs for automatic population:
 							{' '} <a href="/mit/developit">/mit/developit</a>
 						</div>
 
@@ -53,7 +53,7 @@ export default class Home extends Component {
 						</ul>
 
 						<footer>
-							✨ <a href="https://github.com/developit/oss.ninja" target="_blank" rel="noopener noreferrer">Star oss.ninja on Github</a>!
+							✨ <a href="https://github.com/developit/oss.ninja" target="_blank" rel="noopener noreferrer">Star oss.ninja on GitHub</a>!
 						</footer>
 					</article>
 				</section>

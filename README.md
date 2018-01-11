@@ -11,7 +11,7 @@
 ## Examples
 
 - [/mit](https://oss.ninja/mit) _(default unpopulated license)_
-- [/mit/developit](https://oss.ninja/mit/developit) _(automatically populate details from Github)_
+- [/mit/developit](https://oss.ninja/mit/developit) _(automatically populate details from GitHub)_
 - [/bsd?organization=Jason%20Miller](https://oss.ninja/bsd?organization=Jason%20Miller) _(custom details)_
 
 
