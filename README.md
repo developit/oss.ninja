@@ -1,8 +1,12 @@
-# [OSS Ninja](https://oss.ninja)
+<p align="center">
+<img src="https://oss.ninja/assets/ossninja.svg" width="256" height="256">
+</p>
+<h1 align="center"><a href="https://oss.ninja">OSS Ninja</a></h1>
 
-Dynamically generated licenses for your projects.
 
-Let's get rid of LICENSE.txt 😃
+> Dynamically generated licenses for your projects.
+>
+> _Let's get rid of LICENSE.txt_ 😃
 
 ## Examples
 
