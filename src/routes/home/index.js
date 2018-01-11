@@ -28,7 +28,7 @@ export default class Home extends Component {
 		return (
 			<div class={cx(style.home, pending && style.loading)}>
 				<header>
-					<img class={style.logo} src="/assets/ossninja.svg" />
+					<img class={style.logo} src="/assets/ossninja.svg" alt="oss.ninja logo" />
 					<h1 class={style.name}>OSS Ninja</h1>
 					<p>Open Source licenses with just a link.</p>
 				</header>

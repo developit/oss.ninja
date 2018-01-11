@@ -42,11 +42,8 @@
 
 	section {
 		padding: 10px 20px;
-		// margin: 10px;
 		margin: 10px 0;
 		background: #fff;
-		// border-radius: 3px;
-		// border: 2px solid #ccc;
 		border-top: 2px solid #ccc;
 	}
 
@@ -58,7 +55,7 @@
 
 	.tip {
 		display: inline-block;
-		margin: 10px auto 0;
+		margin: 10px 10px 0;
 		background: fade-out($secondary, .98);
 		border: 1px solid fade-out($secondary, .93);
 		border-radius: 5px;

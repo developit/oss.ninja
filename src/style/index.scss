@@ -19,6 +19,10 @@ html, body {
 	box-sizing: border-box;
 }
 
+a {
+	text-underline-position: under;
+}
+
 #app {
 	height: 100%;
 }

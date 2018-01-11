@@ -7,8 +7,12 @@ export default class Header extends Component {
 			<header class={style.header}>
 				<div class={style.inner}>
 					<h1>
-						<a href="/" class={style.logo}><img src="/assets/ossninja.svg" /></a>
-						<a href="/" class={style.name}>OSS Ninja</a>
+						<a href="/">
+							<img class={style.logo} src="/assets/ossninja.svg" alt="oss.ninja logo" />
+							<span class={style.name}>OSS Ninja</span>
+						</a>
+						{/* <a href="/" class={style.logo}><img src="/assets/ossninja.svg" alt="oss.ninja logo" /></a>
+						<a href="/" class={style.name}>OSS Ninja</a> */}
 					</h1>
 					<nav>
 						<label>Popular:</label>
