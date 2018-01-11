@@ -23,15 +23,15 @@ export default function AppWrapper(props) {
 
 class App extends Component {
 	handleRoute = () => {
-		if (this.ga) {
-			this.ga.send('pageview');
-		}
+		if (this.ga) this.ga.send('pageview');
 	};
 
 	componentDidMount() {
-		import('ganalytics').then( ({ default: GAnalytics }) => {
-			this.ga = new GAnalytics(config.gaTrackingId, { aid: 1 });
-		});
+		setTimeout( () => {
+			import('ganalytics').then( ({ default: GAnalytics }) => {
+				this.ga = new GAnalytics(config.gaTrackingId, { aid: 1 });
+			});
+		}, 250);
 	}
 
 	render({ url }) {
@@ -43,8 +43,6 @@ class App extends Component {
 					<License path="/:licenseId" />
 					<License path="/:licenseId/:gh" githubInUrl />
 				</Router>
-
-				{/* <link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Quicksand" rel="stylesheet" /> */}
 
 				{ typeof document==='undefined' && model.getAllLicensesSync && (
 					<script dangerouslySetInnerHTML={{ __html: `window.ALL_LICENSES=${JSON.stringify(model.getAllLicensesSync())}` }} />

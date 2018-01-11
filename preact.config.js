@@ -9,8 +9,6 @@ export default (config, env, helpers) => {
 	if (env.production) {
 		netlifyPlugin(config);
 
-		// config.output.publicPath = `https://${process.env.HOST || 'oss.ninja'}/`;
-
 		// Inline Critical CSS
 		config.plugins.push(
 			new WebpackCritical({
