@@ -1,7 +1,7 @@
 import path from 'path';
 import asyncPlugin from 'preact-cli-plugin-async';
 import netlifyPlugin from 'preact-cli-plugin-netlify';
-// import WebpackCritical from 'webpack-critical';
+import WebpackCritical from 'webpack-critical';
 
 export default (config, env, helpers) => {
 	asyncPlugin(config);
@@ -9,12 +9,12 @@ export default (config, env, helpers) => {
 	if (env.production) {
 		netlifyPlugin(config);
 
-		// // Inline Critical CSS
-		// config.plugins.push(
-		// 	new WebpackCritical({
-		// 		context: env.dest
-		// 	})
-		// );
+		// Inline Critical CSS
+		config.plugins.push(
+			new WebpackCritical({
+				context: env.dest
+			})
+		);
 	}
 
 	// @lib/foo is convenient

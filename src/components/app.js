@@ -44,8 +44,6 @@ class App extends Component {
 					<License path="/:licenseId/:gh" githubInUrl />
 				</Router>
 
-				<link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Quicksand" rel="stylesheet" />
-
 				{ typeof document==='undefined' && model.getAllLicensesSync && (
 					<script dangerouslySetInnerHTML={{ __html: `window.ALL_LICENSES=${JSON.stringify(model.getAllLicensesSync())}` }} />
 				) }
