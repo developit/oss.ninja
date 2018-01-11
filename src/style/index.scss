@@ -6,7 +6,8 @@ html, body {
 	width: 100%;
 	padding: 0;
 	margin: 0;
-	background: $body-bg;
+	background: url('/assets/bg.png') center repeat $body-bg;
+	background-size: 150px 150px;
 	font: 16px/1.5 $font-default;
 	font-weight: 400;
 	color: $body-fg;
