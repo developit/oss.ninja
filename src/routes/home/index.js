@@ -51,6 +51,10 @@ export default class Home extends Component {
 								</li>
 							) )}
 						</ul>
+
+						<footer>
+							✨ <a href="https://github.com/developit/oss.ninja" target="_blank" rel="noopener noreferrer">Star oss.ninja on Github</a>!
+						</footer>
 					</article>
 				</section>
 			</div>

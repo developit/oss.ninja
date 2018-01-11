@@ -53,6 +53,13 @@
 		text-align: center;
 	}
 
+	footer {
+		padding: 0 0 10px;
+		a {
+			color: $primary-dark;
+		}
+	}
+
 	.tip {
 		display: inline-block;
 		margin: 10px 10px 0;
