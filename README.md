@@ -28,3 +28,7 @@ npm run serve
 ```
 
 This project is built with [preact-cli](https://github.com/developit/preact-cli). For a detailed explanation of how things work, check out the [preact-cli readme](https://github.com/developit/preact-cli).
+
+## License
+
+[MIT](https://oss.ninja/mit/developit)
