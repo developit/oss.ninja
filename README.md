@@ -1,5 +1,7 @@
 # [OSS Ninja](https://oss.ninja)
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/developit/oss.ninja.svg?token=c640458da6cc70277449b40d9cdc9b3e68de6bbd761b469f49f43f531bf3f0df&ts=1515633703483)](https://greenkeeper.io/)
+
 Dynamically generated licenses for your projects.
 
 Let's get rid of LICENSE.txt 😃
