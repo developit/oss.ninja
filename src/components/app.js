@@ -22,7 +22,7 @@ export default function AppWrapper(props) {
 class App extends Component {
 	handleRoute = ({ url, previous }) => {
 		// ignore repeated routes (eg, when editing fields):
-		if (previous && url.replace(/?.*$/,'')===previous.replace(/?.*$/,'')) return;
+		if (previous && url.replace(/\?.*$/,'')===previous.replace(/\?.*$/,'')) return;
 		// eslint-disable-next-line no-undef
 		if (typeof gtag==='function') gtag('config', config.gaTrackingId, { page_path: url });
 	};
