@@ -1,4 +1,4 @@
-import { h, Component } from 'preact';
+import { Component } from 'preact';
 import cx from 'classnames';
 import wire from 'wiretie';
 import style from './style';

@@ -1,4 +1,4 @@
-import { h, Component } from 'preact';
+import { Component } from 'preact';
 import { Router } from 'preact-router';
 import Provider from 'preact-context-provider';
 import createStore from 'unistore';
@@ -20,12 +20,27 @@ export default function AppWrapper(props) {
 }
 
 class App extends Component {
-	handleRoute = ({ url, previous }) => {
-		// ignore repeated routes (eg, when editing fields):
-		if (previous && url.replace(/\?.*$/,'')===previous.replace(/\?.*$/,'')) return;
-		// eslint-disable-next-line no-undef
-		if (typeof gtag==='function') gtag('config', config.gaTrackingId, { page_path: url });
+	tq = [];
+
+	track = e => {
+		if (this.ga) this.ga.send('pageview', { dp: e.url });
+		else this.tq.push(e);
 	};
+
+	handleRoute = e => {
+		// ignore repeated routes (eg, when editing fields)
+		if (!e.previous || e.url.split('?')[0]!==e.previous.split('?')[0]) this.track(e);
+	};
+
+	componentDidMount() {
+		setTimeout( () => {
+			import('ganalytics').then( ({ default: GAnalytics }) => {
+				this.ga = new GAnalytics(config.gaTrackingId);
+				this.tq.forEach(this.track);
+				this.tq.length = 0;
+			});
+		}, 250);
+	}
 
 	render({ url }) {
 		return (

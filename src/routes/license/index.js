@@ -1,7 +1,8 @@
-import { h, Component } from 'preact';
+import { Component } from 'preact';
 import { route } from 'preact-router';
 import cx from 'classnames';
 import wire from 'wiretie';
+import Field from './field';
 import style from './style';
 
 const DEFAULTS = {
@@ -84,6 +85,10 @@ export default class License extends Component {
 		}, 250);
 	};
 
+	componentWillUnmount() {
+		clearTimeout(this.routeTimer);
+	}
+
 	render({ licenseId, license, pending, error, matches, githubProfile }) {
 		let query = getQuery(matches, githubProfile);
 
@@ -97,34 +102,6 @@ export default class License extends Component {
 					</article>
 				</section>
 			</div>
-		);
-	}
-}
-
-
-class Field extends Component {
-	state = {
-		value: this.props.value
-	};
-
-	handleChange = e => {
-		let { id, value, onChange } = this.props;
-		if (e.target.value===value) return;
-		value = e.target.value;
-		this.setState({ value });
-		onChange({ id, value });
-	};
-
-	componentWillReceiveProps({ value }) {
-		if (value!==this.state.value) this.setState({ value });
-	}
-
-	render({ id }, { value }) {
-		return (
-			<span class={style.field}>
-				<span class={style.value}>{value || id}&nbsp;</span>
-				<input type="text" class={style.input} onInput={this.handleChange} value={value} placeholder={id} />
-			</span>
 		);
 	}
 }

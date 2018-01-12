@@ -1,4 +1,4 @@
-import { h, Component } from 'preact';
+import { Component } from 'preact';
 import style from './style';
 
 export default class Header extends Component {
@@ -11,8 +11,6 @@ export default class Header extends Component {
 							<img class={style.logo} src="/assets/ossninja.svg" alt="oss.ninja logo" />
 							<span class={style.name}>OSS Ninja</span>
 						</a>
-						{/* <a href="/" class={style.logo}><img src="/assets/ossninja.svg" alt="oss.ninja logo" /></a>
-						<a href="/" class={style.name}>OSS Ninja</a> */}
 					</h1>
 					<nav>
 						<label>Popular:</label>
