@@ -96,10 +96,7 @@ export default class License extends Component {
 			<div class={cx(style.license, pending && style.loading)}>
 				<section>
 					<h1>{license && license.info && license.info.name || licenseId} License</h1>
-					
-					<article>
-						{license && this.format(license.text, query)}
-					</article>
+					<article>{license && this.format(license.text, query)}</article>
 				</section>
 			</div>
 		);

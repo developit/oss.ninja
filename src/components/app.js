@@ -29,7 +29,22 @@ class App extends Component {
 
 	handleRoute = e => {
 		// ignore repeated routes (eg, when editing fields)
-		if (!e.previous || e.url.split('?')[0]!==e.previous.split('?')[0]) this.track(e);
+		if (!e.previous || e.url.split('?')[0]!==e.previous.split('?')[0]) {
+			this.track(e);
+
+			// a11y fix
+			clearTimeout(this.timer);
+			this.timer = setTimeout( () => {
+				let h1 = typeof document!=='undefined' && document.querySelector('h1');
+				if (h1 && h1!==this.h1) {
+					h1.tabIndex = -1;
+					h1.style.outline = 'none';
+					h1.focus();
+					document.title = h1.textContent;
+				}
+				this.h1 = h1;
+			}, 250);
+		}
 	};
 
 	componentDidMount() {

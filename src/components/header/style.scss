@@ -23,9 +23,19 @@
 		margin: -5px 10px 0 0;
 	}
 
-	h1 a {
-		color: inherit;
-		text-decoration: none;
+	h2 {
+		float: left;
+		margin: 0;
+		padding: 0 15px;
+		font-size: 36px;
+		line-height: 56px;
+		font-weight: 400;
+		font-family: $font-logo;
+
+		a {
+			color: inherit;
+			text-decoration: none;
+		}
 	}
 
 	@media (max-width: 480px) {
@@ -34,16 +44,6 @@
 		}
 	}
 
-	h1 {
-		float: left;
-		margin: 0;
-		padding: 0 15px;
-		font-size: 36px;
-		line-height: 56px;
-		font-weight: 400;
-		font-family: $font-logo;
-	}
-	
 	nav {
 		float: right;
 		font-size: 100%;

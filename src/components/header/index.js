@@ -6,12 +6,12 @@ export default class Header extends Component {
 		return (
 			<header class={style.header}>
 				<div class={style.inner}>
-					<h1>
+					<h2>
 						<a href="/">
 							<img class={style.logo} src="/assets/ossninja.svg" alt="oss.ninja logo" />
 							<span class={style.name}>OSS Ninja</span>
 						</a>
-					</h1>
+					</h2>
 					<nav>
 						<label>Popular:</label>
 						<a href="/mit">MIT</a>
