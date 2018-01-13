@@ -12,7 +12,7 @@ const DEFAULTS = {
 function getQuery(matches, githubProfile) {
 	let query = {};
 	if (githubProfile) {
-		query.organization = githubProfile.name;
+		query.organization = githubProfile.name || githubProfile.login;
 	}
 	for (let i in Object(matches)) {
 		if (matches.hasOwnProperty(i) && i!=='licenseId') {
