@@ -25,56 +25,127 @@
 		margin: auto;
 	}
 
-	.field {
-		display: inline-block;
-		position: relative;
-		top: 4px;
-		vertical-align: sub;
-		min-width: 6em;
-		max-width: 20em;
-		margin: 0 2px 0;
-		overflow: hidden;
-
-		.value {
-			display: inline-block;
-			visibility: hidden;
-			padding: 2px 4px;
-			white-space: nowrap;
-		}
-
-		.input {
-			position: absolute;
-			left: 0;
-			top: 0;
-			width: 100%;
-			padding: 1px 3px;
-			margin: 0;
-			background: white;
-			border: 1px dotted white;
-			font: inherit;
-			border-bottom-color: $grey-lighter;
-			outline: none;
-
-			&:hover {
-				border-bottom-color: $primary-light;
-			}
-			&:focus {
-				border-style: solid;
-				border-color: $primary-light;
-				border-radius: 3px;
-			}
-		}
-	}
-
 	article {
 		padding: 10px 20px;
 		margin: 10px;
 		background: #fff;
-		border-radius: 3px;
-		border: 2px solid #ccc;
+		border-radius: 5px;
+		border: 1px solid $header-shadow;
+		box-shadow: 0 0 10px rgba(0,0,0,.05);
 
 		br {
 			line-height: 3em;
+		}
+	}
+}
+
+.simplified {
+	position: relative;
+	margin: -10px -20px 10px;
+	max-height: 1000px;
+	background: $header-bg;
+	border-radius: 4px 4px 0 0;
+	border-bottom: 1px solid $header-shadow;
+	transition: all 1s ease;
+	overflow: hidden;
+
+	&.loading {
+		opacity: 0;
+		max-height: 0;
+	}
+
+	.inner {
+		padding: 20px;
+		overflow: hidden;
+	}
+
+	summary {
+		padding: 0 0 10px;
+		color: #555;
+	}
+
+	.details {
+		display: flex;
+		margin: 0 -3px;
+		padding: 0;
+		list-style: none;
+
+		& > li {
+			flex: 1 1 33.33%;
+			padding: 0;
+			margin: 3px;
+			background: #fff;
+			box-shadow: 0 0 0.5px -0.5px #000;
+			border-radius: 3px;
+		}
+
+		ul {
+			margin: 0;
+			padding: 2px 0;
+		}
+
+		ul li {
+			display: block;
+			padding: 0 8px;
+			color: #555;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.details {
+			flex-direction: column;
+		}
+	}
+
+	h6 {
+		padding: 2px 8px;
+		margin: 0;
+		background: #f7f7f7;
+		border-bottom: 1px solid $grey-lighter;
+		border-radius: 3px 3px 0 0;
+		color: #555;
+		font-weight: bold;
+		font-size: 100%;
+	}
+}
+
+.field {
+	display: inline-block;
+	position: relative;
+	top: 4px;
+	vertical-align: sub;
+	min-width: 6em;
+	max-width: 20em;
+	margin: 0 2px 0;
+	overflow: hidden;
+
+	.value {
+		display: inline-block;
+		visibility: hidden;
+		padding: 2px 4px;
+		white-space: nowrap;
+	}
+
+	.input {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		padding: 1px 3px;
+		margin: 0;
+		background: white;
+		border: 1px dotted white;
+		font: inherit;
+		border-bottom-color: $grey-lighter;
+		outline: none;
+
+		&:hover {
+			border-bottom-color: $primary-light;
+		}
+		&:focus {
+			border-style: solid;
+			border-color: $primary-light;
+			border-radius: 3px;
 		}
 	}
 }

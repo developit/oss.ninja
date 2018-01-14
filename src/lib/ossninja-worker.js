@@ -39,6 +39,14 @@ export async function getGithubProfile(username) {
 	return await get(`https://api.github.com/users/${encodeURIComponent(username)}`, 'json');
 }
 
+export async function getSimplifiedLicense(name) {
+	let info = findLicense(normalizeName(name));
+	if (info==null) throw Error('Not found');
+	let result = await get(`https://api.github.com/licenses/${encodeURIComponent(info.name)}`, 'json');
+	if (result.description) result.description = result.description.replace(/<.*?>/g, '');
+	return result;
+}
+
 function normalizeName(name) {
 	return String(name).toLowerCase().replace(/[ -]+/g, '-');
 }

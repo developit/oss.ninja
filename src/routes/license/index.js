@@ -4,6 +4,7 @@ import jsxReplace from '../../lib/jsx-replace';
 import cx from 'classnames';
 import wire from 'wiretie';
 import Field from './field';
+import Simplified from './simplified';
 import style from './style';
 
 const DEFAULTS = {
@@ -79,7 +80,10 @@ export default class License extends Component {
 			<div class={cx(style.license, pending && style.loading)}>
 				<section>
 					<h1>{license && license.info && license.info.name || licenseId} License</h1>
-					<article>{license && this.format(license.text, query)}</article>
+					<article>
+						<Simplified licenseId={licenseId} />
+						{license && this.format(license.text, query)}
+					</article>
 				</section>
 			</div>
 		);
