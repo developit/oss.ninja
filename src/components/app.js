@@ -40,7 +40,7 @@ class App extends Component {
 					h1.tabIndex = -1;
 					h1.style.outline = 'none';
 					h1.focus();
-					document.title = h1.textContent;
+					document.title = h1.textContent + config.appTitleSuffix;
 				}
 				this.h1 = h1;
 			}, 250);
