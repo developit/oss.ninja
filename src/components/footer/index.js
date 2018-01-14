@@ -16,7 +16,7 @@ export default class Footer extends Component {
 						</p>
 					</section>
 					<nav>
-						<a href="https://github.com/developit/oss.ninja" target="_blank" rel="noopener noreferrer">Github</a>
+						<a href="https://github.com/developit/oss.ninja" target="_blank" rel="noopener noreferrer">GitHub</a>
 						<a href="https://github.com/developit/oss.ninja/issues" target="_blank" rel="noopener noreferrer">Report Issues</a>
 					</nav>
 				</div>
