@@ -1,12 +1,12 @@
 export default function ossNinja({ config }) {
 	let model;
 
-	if (typeof Worker==='function') {
-		model = require('workerize-loader?name=ossninja!./ossninja-worker')();
-		delete model.getAllLicensesSync;
+	if (PRERENDER) {
+		model = require('./ossninja-worker');
 	}
 	else {
-		model = require('./ossninja-worker');
+		model = require('workerize-loader?name=ossninja!./ossninja-worker')();
+		delete model.getAllLicensesSync;
 	}
 
 	return model;

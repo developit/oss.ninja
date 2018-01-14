@@ -17,6 +17,8 @@ export default (config, env, helpers) => {
 		);
 	}
 
+	helpers.getPluginsByName(config, 'DefinePlugin')[0].plugin.definitions.PRERENDER = String(env.ssr===true);
+
 	// @lib/foo is convenient
 	config.resolve.alias['@lib'] = path.resolve(__dirname, 'src/lib');
 

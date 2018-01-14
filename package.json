@@ -12,6 +12,9 @@
   },
   "eslintConfig": {
     "extends": "eslint-config-developit",
+    "globals": {
+      "PRERENDER": 0
+    },
     "rules": {
       "prefer-spread": 0,
       "react/prefer-stateless-function": 0,
