@@ -1,0 +1,60 @@
+@import '~style/helpers';
+
+.footer {
+	width: 100%;
+	
+	overflow: hidden;
+
+	.inner {
+		display: flex;
+		max-width: 900px;
+		margin: 0 auto;
+		padding: 20px 20px 40px;
+	}
+
+	h2 {
+		float: left;
+		margin: 0;
+		padding: 0 10px;
+		font-size: 30px;
+		line-height: 56px;
+		font-weight: 400;
+		font-family: $font-logo;
+		opacity: .7;
+		transition: all 300ms ease;
+		filter: grayscale(1);
+		cursor: default;
+
+		&:hover {
+			opacity: 1;
+			filter: none;
+		}
+	}
+
+	.logo {
+		flex: 0 0 auto;
+		height: 40px;
+		vertical-align: middle;
+		margin: -5px 10px 0 0;
+	}
+
+	section {
+		flex: 1 1 auto;
+		padding: 1em;
+		text-align: center;
+
+		p {
+			margin: 0;
+		}
+	}
+
+	nav {
+		flex: 0 0 auto;
+		padding: .5em;
+
+		a {
+			display: inline-block;
+			padding: .5em;
+		}
+	}
+}

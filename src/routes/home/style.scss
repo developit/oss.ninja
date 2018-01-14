@@ -45,6 +45,7 @@
 		margin: 10px 0;
 		background: #fff;
 		border-top: 2px solid #ccc;
+		border-bottom: 2px solid #ccc;
 	}
 
 	article {
@@ -54,10 +55,8 @@
 	}
 
 	footer {
-		padding: 0 0 10px;
-		a {
-			color: $primary-dark;
-		}
+		padding: 20px 0 40px;
+		font-size: 130%;
 	}
 
 	.tip {

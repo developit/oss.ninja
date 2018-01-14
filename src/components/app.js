@@ -4,6 +4,7 @@ import Provider from 'preact-context-provider';
 import createStore from 'unistore';
 import ossninja from '@lib/ossninja';
 import Header from './header';
+import Footer from './footer';
 import Home from '../routes/home';
 import License from '../routes/license';
 import config from '../config.json';
@@ -66,6 +67,7 @@ class App extends Component {
 					<License path="/:licenseId" />
 					<License path="/:licenseId/:gh" githubInUrl />
 				</Router>
+				<Footer />
 
 				{ typeof document==='undefined' && model.getAllLicensesSync && (
 					<script dangerouslySetInnerHTML={{ __html: `window.ALL_LICENSES=${JSON.stringify(model.getAllLicensesSync())}` }} />
