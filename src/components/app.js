@@ -31,8 +31,6 @@ class App extends Component {
 	handleRoute = e => {
 		// ignore repeated routes (eg, when editing fields)
 		if (!e.previous || e.url.split('?')[0]!==e.previous.split('?')[0]) {
-			this.track(e);
-
 			// a11y fix
 			clearTimeout(this.timer);
 			this.timer = setTimeout( () => {
@@ -44,6 +42,8 @@ class App extends Component {
 					document.title = h1.textContent + config.appTitleSuffix;
 				}
 				this.h1 = h1;
+
+				this.track(e);
 			}, 250);
 		}
 	};
@@ -72,9 +72,6 @@ class App extends Component {
 				{ typeof document==='undefined' && model.getAllLicensesSync && (
 					<script dangerouslySetInnerHTML={{ __html: `window.ALL_LICENSES=${JSON.stringify(model.getAllLicensesSync())}` }} />
 				) }
-
-				<script>{`dataLayer=[['js',new Date()],['config','${config.gaTrackingId}']];function gtag(){dataLayer.push(arguments)}`}</script>
-				<script async src="//www.googletagmanager.com/gtag/js?id=UA-6031694-25" />
 			</div>
 		);
 	}
