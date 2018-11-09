@@ -48,15 +48,15 @@ class App extends Component {
 		}
 	};
 
-	componentDidMount() {
-		setTimeout( () => {
-			import('ganalytics').then( ({ default: GAnalytics }) => {
-				this.ga = new GAnalytics(config.gaTrackingId);
-				this.tq.forEach(this.track);
-				this.tq.length = 0;
-			});
-		}, 250);
-	}
+	// componentDidMount() {
+	// 	setTimeout( () => {
+	// 		import('ganalytics').then( ({ default: GAnalytics }) => {
+	// 			this.ga = new GAnalytics(config.gaTrackingId);
+	// 			this.tq.forEach(this.track);
+	// 			this.tq.length = 0;
+	// 		});
+	// 	}, 250);
+	// }
 
 	render({ url }) {
 		return (

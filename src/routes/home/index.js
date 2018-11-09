@@ -15,11 +15,18 @@ function flattenAliases(data, item) {
 
 const getName = obj => obj.name || obj.key;
 
+let first = true;
+
 @wire('model', {
 	licenses: 'getAllLicenses'
 }, ({ getAllLicensesSync }) => ({ getAllLicensesSync }))
 export default class Home extends Component {
 	render({ licenses, pending, getAllLicensesSync }) {
+		if (licenses && first) {
+			first = false;
+			window.ga('send', 'timing', 'content', 'load', Math.round(performance.now()));
+		}
+
 		// prerendering!
 		if (!licenses || pending && pending.licenses) licenses = getAllLicensesSync ? getAllLicensesSync() : window.ALL_LICENSES;
 

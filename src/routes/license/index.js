@@ -24,6 +24,7 @@ function getQuery(matches, githubProfile) {
 	return query;
 }
 
+let first = true;
 
 @wire('model', ({ licenseId, gh }) => ({
 	license: licenseId && ['getLicense', licenseId],
@@ -75,6 +76,11 @@ export default class License extends Component {
 
 	render({ licenseId, license, pending, error, matches, githubProfile }) {
 		let query = getQuery(matches, githubProfile);
+
+		if (license && first) {
+			first = false;
+			window.ga('send', 'timing', 'content', 'load', Math.round(performance.now()));
+		}
 
 		return (
 			<div class={cx(style.license, pending && style.loading)}>

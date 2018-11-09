@@ -5,9 +5,9 @@
   "license": "MIT",
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run -s serve || npm run -s dev",
-    "build": "preact build",
-    "serve": "preact build && preact serve",
-    "dev": "preact watch",
+    "build": "preact build --template src/template.html",
+    "serve": "npm run -s build && preact serve",
+    "dev": "preact watch --template src/template.html",
     "lint": "eslint src"
   },
   "eslintConfig": {
@@ -30,7 +30,7 @@
     "if-env": "^1.0.0",
     "node-sass": "^4.7.2",
     "preact-cli": "^2.0.1",
-    "preact-cli-plugin-async": "^1.0.0",
+    "preact-cli-plugin-async": "^2.0.0",
     "preact-cli-plugin-netlify": "^1.1.0",
     "sass-loader": "^6.0.6",
     "webpack-critical": "^1.1.1",
