@@ -4,7 +4,7 @@
 <h1 align="center"><a href="https://oss.ninja">OSS Ninja</a></h1>
 
 
-> Dynamically generated licenses for your projects.
+> Dynamically Generated licenses for your project's.
 >
 > _Let's get rid of LICENSE.txt_ 😃
 
